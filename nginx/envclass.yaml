@@ -1,0 +1,23 @@
+apiVersion: secrets-store.csi.x-k8s.io/v1alpha1
+kind: SecretProviderClass
+metadata:
+  name: admin-aws-secrets
+
+spec:
+  provider: aws
+
+### Start update
+  secretObjects:
+    - secretName: my-k8s-secrets
+      type: Opaque
+      data:
+        - objectName: parameterAlias
+          key: myParameter
+### End update
+
+  parameters:
+    objects: |                      
+        - objectName: "/spikeseed/blog/myparameter"
+          objectType: "ssmparameter"
+          objectAlias: parameterAlias
+### End update
