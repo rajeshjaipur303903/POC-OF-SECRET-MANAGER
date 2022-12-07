@@ -135,8 +135,8 @@ kubectl logs -n kube-system -f -l app=csi-secrets-store-provider-aws
 
 ## 8. Create Secret Provider Class
 - Create `nginx/2-secret-provider-class.yaml`
-
-//---
+{
+---
 apiVersion: secrets-store.csi.x-k8s.io/v1alpha1
 kind: SecretProviderClass
 metadata:
@@ -156,8 +156,8 @@ spec:
       - objectName: prod/service/token5
         objectType: secretsmanager
         objectAlias: secret-token
----//
-
+---
+}
 ```bash
 kubectl apply -f <filename>
 ```
