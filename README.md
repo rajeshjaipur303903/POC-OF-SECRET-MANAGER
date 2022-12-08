@@ -135,7 +135,6 @@ kubectl logs -n kube-system -f -l app=csi-secrets-store-provider-aws
 
 ## 8. Create Secret Provider Class
 - Create `nginx/2-secret-provider-class.yaml`
-# 2-secret-provider-class.yaml
 ```bash
 ---
 apiVersion: secrets-store.csi.x-k8s.io/v1alpha1
@@ -157,7 +156,6 @@ spec:
       - objectName: prod/service/token5
         objectType: secretsmanager
         objectAlias: secret-token
----
 ```
 
 ```bash
@@ -166,7 +164,7 @@ kubectl apply -f <filename>
 
 ## 11. Create Deployment file
 - Create nginx `3-deployment.yaml`
-
+```bash
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -209,7 +207,7 @@ spec:
           volumeAttributes:
             secretProviderClass: aws-secrets
  ---
- 
+ ```
 - Open 2 tabs
 ```bash
 kubectl logs -n kube-system -f -l app=secrets-store-csi-driver
