@@ -1,3 +1,6 @@
+
+<img src="https://raw.githubusercontent.com/kubernetes/kubernetes/master/logo/logo.png" width="150" height="150" />
+
 # AWS EKS & Secrets Manager (File & Env | Kubernetes | Secrets Store CSI Driver | K8s)
 
 ## 1. Create Secret in AWS Secrets Manager
