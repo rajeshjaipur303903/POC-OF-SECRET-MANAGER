@@ -240,6 +240,8 @@ eksctl delete cluster -f eks.yaml
 - Delete IAM Role `api-token-access`
 
 ##Links
+for key_value
+https://docs.aws.amazon.com/secretsmanager/latest/userguide/integrating_csi_driver.html
 https://www.youtube.com/watch?v=Rmgo6vCytsg&t=582s
 
 
